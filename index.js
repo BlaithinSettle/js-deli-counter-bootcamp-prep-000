@@ -1,24 +1,18 @@
 // first function  takeANumber
 
-function takeANumber(theDeliLine, person) {
-  var newArray = [];
-  var counter = 1;
-  var newPosition;
-  theDeliLine.push(person);
+var count = 0;
 
-  for (var i = 0; i < theDeliLine.length; i++) {
-    newArray.push(
-      "Welcome, " +
-        theDeliLine[i] +
-        ". You are number " +
-        counter++ +
-        " in line."
-    );
-
-    newPosition = newArray[i];
-  }
-  return newPosition;
+function takeANumber(theDeliLine) {
+  count++
+  theDeliLine.push(count)
+  return `Welcome. You are number ${count}`
 }
+
+let line = []
+console.log(takeANumber(line))
+console.log(takeANumber(line))
+console.log(takeANumber(line))
+console.log(line)
 
 //now serving function
 
